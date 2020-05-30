@@ -21,7 +21,7 @@ gpc$Sub_metering_2 <- as.numeric(gpc$Sub_metering_2)
 gpc$Sub_metering_3 <- as.numeric(gpc$Sub_metering_3)
 gpc$DateTime <- as.POSIXct(paste(gpc$Date, gpc$Time), format ="%Y-%m-%d %H:%M:%S")
 
-#png("./plot4.png", height = 480, width = 480)
+png("./plot4.png", height = 480, width = 480)
 par(mfrow = c(2, 2))
 # First plot datetime, Global_active_power
 plot(gpc$DateTime,
@@ -87,4 +87,4 @@ plot(gpc$DateTime,
      type = "n"
 )
 lines(gpc$DateTime, gpc$Global_reactive_power)
-#dev.off()
+dev.off()
